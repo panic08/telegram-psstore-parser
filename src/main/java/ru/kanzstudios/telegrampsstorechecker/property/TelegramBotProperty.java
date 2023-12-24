@@ -1,2 +1,15 @@
-package ru.kanzstudios.telegrampsstorechecker.property;public class TelegramBotProperty {
+package ru.kanzstudios.telegrampsstorechecker.property;
+
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+@Getter
+public class TelegramBotProperty {
+    @Value("${telegram.bots.token}")
+    private String token;
+
+    @Value("${telegram.bots.name}")
+    private String name;
 }
